@@ -1,0 +1,11 @@
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-logo {
+    background: -webkit-linear-gradient(rgba(253, 111, 0, 1), rgba(230, 0, 38, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700; font-size: 28px; line-height: 39px; font-family: 'K2D', sans-serif;
+}

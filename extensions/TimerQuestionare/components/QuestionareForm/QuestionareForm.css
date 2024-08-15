@@ -1,0 +1,40 @@
+.hidden {
+    display: none;
+}
+
+main {
+    height: 60vh;
+    padding: 60px;
+    font-family: 'KD2', 'san-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#question-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#question-container {
+    border: 1px solid #111;
+    border-radius: 6px;
+    padding: 24px;
+    margin: 30px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+input {
+    content: url('https://i.sstatic.net/M3EkO.png');
+    height: 16px;
+    width: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  input:checked {
+    background-color: green;
+  }
+

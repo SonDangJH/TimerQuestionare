@@ -1,0 +1,18 @@
+#minutes, #seconds {
+    background-color: #1ed760;
+    color: white;
+    font-weight: 700;
+    font-size: 56px;
+    padding: 12px 16px 10px 24px;
+    border-radius: 6px;
+    letter-spacing: 8px;
+}
+
+#timer-container {
+    background-color: rgb(255, 234, 200);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 56px;
+    padding: 34px 30px;
+    margin: 34px 30px;
+}
