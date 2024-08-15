@@ -9,6 +9,9 @@ function runQuestionPage() {
     
     const countUpTimer = runTimer();
     countUpTimer.setTimerRunningState(false);
+    const textarea = document.getElementById('answer-input');
+    const maxChars = 100;
+    const splitedOverArray = []
 
     timerContainer.addEventListener('click',()=>{
         if (!countUpTimer.stopTimerFlag) return;
@@ -18,9 +21,9 @@ function runQuestionPage() {
     })
 
     submitButton.addEventListener('click',()=>{
-        countUpTimer.setTimerRunningState(false);
         submitAnswer(questionInfo, countUpTimer);
     });
+
 
 }
 

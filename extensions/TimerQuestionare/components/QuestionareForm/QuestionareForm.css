@@ -63,10 +63,6 @@ main {
     border-radius: 50%;
 }
 
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
 .container input:checked ~ .checkmark {
     background-color: #2196F3;
 }

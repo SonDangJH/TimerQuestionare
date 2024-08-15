@@ -1,4 +1,8 @@
 const questions = [
+  {
+    question: "What is the capital of France?",
+    answer: "Paris"
+  },
     {
       question: "What is the capital of Australia?",
       options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
@@ -12,10 +16,6 @@ const questions = [
     {
       question: "What is the biggest animal in the world?",
       answer: "Blue whale"
-    },
-    {
-      question: "What is the capital of France?",
-      answer: "Paris"
     },
     {
       question: "What do yous call a baby cow?",

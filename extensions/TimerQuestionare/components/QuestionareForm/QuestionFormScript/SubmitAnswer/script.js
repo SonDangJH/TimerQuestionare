@@ -28,6 +28,7 @@ function submitAnswer(questionInfo, timerObj) {
     }
 
     timerObj.stopTimerFlag = true;
+    timerObj.setTimerRunningState(false);
     errorMessage.innerHTML = ``;
     questionContainer.innerHTML = `Click the timer to next question`;
     submitButton.classList.add('hidden');
