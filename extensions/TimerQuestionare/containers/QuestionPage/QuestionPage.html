@@ -12,7 +12,6 @@
     <meta name="application-name" content="Journey Horizon">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="../../components/Header/style.css">
     <link rel="stylesheet" href="../../components/Footer/style.css">
     <link rel="stylesheet" href="../../components/QuestionareForm/QuestionareForm.css">
@@ -33,7 +32,7 @@
             <label id="minutes">00</label>:<label id="seconds">00</label>
         </section>
         <section id="question-form-container">
-                <label for="answer" id="question-container">Click the timer to go</label><br>
+                <label id="question-container">Click the timer to go</label><br>
                 <input type="text" id="answer-input" name="answer" class="hidden" placeholder="Type answer here ..."><br>
                     <div id="multiple-choices-container">
                     </div>
@@ -64,7 +63,8 @@
     </footer>
 </body>
 <script src="../../components/Timer/Timer.js"></script>
-<script src="../../components/QuestionareForm/QuestionareForm.js"></script>
+<script src="../../components/QuestionareForm/QuestionFormScript/ShowQuestion/script.js"></script>
+<script src="../../components/QuestionareForm/QuestionFormScript/SubmitAnswer/script.js"></script>
 <script src="../../data/questionList.js"></script>
 <script src="./script.js"></script>
 </html>
