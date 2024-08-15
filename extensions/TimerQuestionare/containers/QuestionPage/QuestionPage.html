@@ -34,11 +34,17 @@
         </section>
         <section id="question-form-container">
                 <label for="answer" id="question-container">Click the timer to go</label><br>
-                <input type="text" id="answer-input" name="answer"><br>
+                <input type="text" id="answer-input" name="answer" class="hidden" placeholder="Type answer here ..."><br>
                     <div id="multiple-choices-container">
                     </div>
-                    <button id="submit-btn" class="hidden">Submit</button>
+                <button id="submit-btn" class="hidden">Submit</button>
+                <span id="error-message"></span>
               
+        </section>
+        <section id="result-board" class="hidden">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/013/836/471/small_2x/comic-lettering-win-comic-speech-bubble-with-emotional-text-win-bright-dynamic-cartoon-illustration-in-retro-pop-art-style-comic-text-sound-effects-png.png" width="200" height="200"/>
+            <br/><br/>
+            <span id="result-message"></span>
         </section>
     </main>
     <footer>
@@ -60,4 +66,5 @@
 <script src="../../components/Timer/Timer.js"></script>
 <script src="../../components/QuestionareForm/QuestionareForm.js"></script>
 <script src="../../data/questionList.js"></script>
+<script src="./script.js"></script>
 </html>

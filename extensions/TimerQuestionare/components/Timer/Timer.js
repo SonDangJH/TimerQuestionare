@@ -16,9 +16,26 @@ function runTimer() {
         document.getElementById('submit-btn').classList.remove('hidden');
     })
     document.getElementById('submit-btn').addEventListener('click',()=>{
+        if (questions[currentQuestion].options !== undefined)
+        {
+            if (document.querySelector('input[name="answer-choice"]:checked') === null) {
+                document.getElementById('error-message').innerHTML = `Please choose an answer then submit again`;
+                return;
+            }
+        }
+        else {
+            if (document.getElementById('answer-input').value === '') {
+                document.getElementById('error-message').innerHTML = `Please type your answer then submit again`;
+                return;
+            }
+        }
         stopTimerFlag = true;
+        document.getElementById('error-message').innerHTML = ``;
         document.getElementById('question-container').innerHTML = `Click the timer to next question`;
         document.getElementById('submit-btn').classList.add('hidden');
+        const answer_input = document.getElementById('answer-input');
+        answer_input.classList.add('hidden');
+        answer_input.value = '';
         if (questions[currentQuestion].options !== undefined)
         {
             if (document.querySelector('input[name="answer-choice"]:checked').value === questions[currentQuestion].answer) {
@@ -29,7 +46,10 @@ function runTimer() {
 
         if (currentQuestion === questions.length - 1)
         {
-            window.location.href = "/Users/developer/Downloads/Exercise3/TimerQuestionare/src/extensions/TimerQuestionare/containers/ResultPage/ResultPage.html";
+            document.getElementById('result-message').innerHTML = `You have achieve ${totalScore} points in ${minutesLabel.innerHTML} minutes and ${secondsLabel.innerHTML} minutes`
+            document.getElementById('timer-container').classList.add('hidden');
+            document.getElementById('question-container').classList.add('hidden');
+            document.getElementById('result-board').classList.remove('hidden')
         }
         else {
             currentQuestion++;

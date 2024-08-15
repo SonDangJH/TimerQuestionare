@@ -1,5 +1,5 @@
 #minutes, #seconds {
-    background-color: #1ed760;
+    background-color: #06d6a0;
     color: white;
     font-weight: 700;
     font-size: 56px;
@@ -9,7 +9,7 @@
 }
 
 #timer-container {
-    background-color: rgb(255, 234, 200);
+    background-color: #ffd166;
     border-radius: 6px;
     font-weight: 700;
     font-size: 56px;

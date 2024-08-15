@@ -5,7 +5,6 @@
 main {
     height: 60vh;
     padding: 60px;
-    font-family: 'KD2', 'san-serif';
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,27 +13,115 @@ main {
 #question-form-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
+    width: 360px;
 }
 
 #question-container {
     border: 1px solid #111;
     border-radius: 6px;
     padding: 24px;
-    margin: 30px;
     font-weight: 600;
     font-size: 20px;
+    text-align: center;
 }
 
-input {
-    content: url('https://i.sstatic.net/M3EkO.png');
-    height: 16px;
-    width: 16px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+#multiple-choices-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 6px;
+    margin-bottom: 16px;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
-  input:checked {
-    background-color: green;
-  }
+  
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #eee;
+border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+background-color: #2196F3;
+}
+
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+#submit-btn {
+    background-color: #118ab2;
+    padding: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+}
+
+#answer-input {
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+#error-message {
+    color: red;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+#result-message {
+    color: #06d6a0;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#result-board {
+    text-align: center;
+}
 
